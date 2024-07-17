@@ -40,27 +40,3 @@ def get_movie_info(title: str):
 
 
 
-# import requests
-
-# # Define the OMDB API endpoint
-# OMDB_API_URL = 'http://www.omdbapi.com/'
-
-# # Parameters for the request (API key and movie title)
-# params = {
-#     'apikey': '9d47f0f9',
-#     't': 'tron'
-# }
-
-# try:
-#     # Make the GET request to the OMDB API
-#     response = requests.get(OMDB_API_URL, params=params)
-#     response.raise_for_status()  # Raise exception for 4xx and 5xx errors
-    
-#     # Parse the JSON response
-#     data = response.json()
-    
-#     # Print the response data
-#     print(data)
-
-# except requests.exceptions.RequestException as e:
-#     print(f"Failed to fetch data: {str(e)}")
