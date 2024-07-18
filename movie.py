@@ -11,6 +11,8 @@ app = FastAPI()
 # Example external API endpoint for OMDB
 OMDB_API_URL = 'http://www.omdbapi.com/'
 
+
+
 @app.get("/api/movie/{title}")
 def get_movie_info(title: str):
     try:
@@ -19,7 +21,7 @@ def get_movie_info(title: str):
             'apikey': api_key,
             't': title
         }
-        
+        print(api_key, 'apiKey')
         response = requests.get(OMDB_API_URL, params=params)
         response.raise_for_status()  # Raise exception for 4xx and 5xx errors
         data = response.json()
